@@ -21,9 +21,9 @@ def truncatePathToBase(path):
 
 soundPathBase = truncatePathToBase(fullpath)
 
-
-
+print("lol")
 
 # After a beta test it works like a dream!! we just have to make sure it runs every 30 mins and starts the process at pc start
 print(emoji.emojize("Currently playing wav file :speaker_high_volume:"))
 winsound.PlaySound(soundPathBase,0)
+

@@ -18,7 +18,6 @@ timeInterval = 25
 
 
 fullpath = "C:\\Users\\Coleson\\desktop\\KrkFix\\main.py\\5hzTone.wav"
-base = os.path.basename(fullpath)
 
 
 

@@ -12,12 +12,10 @@ import emoji;
 
 
 
-freq = 300
-durationMs = 3000
-timeInterval = 25
+timeInterval = 3
 
 
-fullpath = "C:\\Users\\Coleson\\desktop\\KrkFix\\main.py\\5hzTone.wav"
+fullpath = "C:\\Users\\Coleson\\desktop\\KrkFix\\5hzTone.wav"
 
 
 
@@ -33,10 +31,12 @@ def playTone():
     print(emoji.emojize("Currently playing wav file :speaker_high_volume:"))
     winsound.PlaySound(soundPathBase,0)
 
-
+def logMessageTest(): 
+    print("This message will not crash")
 
 #play tone every 25 minutes
-schedule.every(timeInterval).minutes.do(playTone)
+schedule.every(timeInterval).seconds.do(logMessageTest)
+# schedule.every(timeInterval).minutes.do(playTone)
 
 
 while True:

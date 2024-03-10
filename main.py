@@ -2,7 +2,9 @@ import winsound;
 import os;
 import time;
 import schedule;
-import emoji;
+
+# if you need to recompile here pyinstaller terminal code : 
+# PyInstaller --onefile  --hide-console=hide-early main.py
 
 
 timeInterval = 25
@@ -21,7 +23,7 @@ def playTone():
 
 #play tone every 25 minutes
 schedule.every(timeInterval).minutes.do(playTone)
-
+    
 while True:
     schedule.run_pending()
     # when you sleep threads you are doing the same thing as await async meaning your blocking the execution of further code in the same thread until it finishes

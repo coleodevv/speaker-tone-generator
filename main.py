@@ -5,18 +5,8 @@ import schedule;
 import emoji;
 
 
-
-
-
-
-
-
-
-timeInterval = 3
-
-
+timeInterval = 25
 fullpath = "C:\\Users\\Coleson\\desktop\\KrkFix\\5hzTone.wav"
-
 
 
 # gets the sound file without the filepath good for directly working with file types  
@@ -25,19 +15,12 @@ def truncatePathToBase(path):
 
 soundPathBase = truncatePathToBase(fullpath)
 
-
 # After a beta test it works like a dream!! we just have to make sure it runs every 30 mins and starts the process at pc start
 def playTone():
-    print(emoji.emojize("Currently playing wav file :speaker_high_volume:"))
     winsound.PlaySound(soundPathBase,0)
 
-def logMessageTest(): 
-    print("This message will not crash")
-
 #play tone every 25 minutes
-schedule.every(timeInterval).seconds.do(logMessageTest)
-# schedule.every(timeInterval).minutes.do(playTone)
-
+schedule.every(timeInterval).minutes.do(playTone)
 
 while True:
     schedule.run_pending()

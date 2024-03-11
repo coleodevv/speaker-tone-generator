@@ -7,7 +7,7 @@ import schedule;
 # PyInstaller --onefile  --hide-console=hide-early main.py
 
 
-timeInterval = 25
+timeInterval = 17
 fullpath = "C:\\Users\\Coleson\\desktop\\KrkFix\\5hzTone.wav"
 
 
@@ -21,7 +21,7 @@ soundPathBase = truncatePathToBase(fullpath)
 def playTone():
     winsound.PlaySound(soundPathBase,0)
 
-#play tone every 25 minutes
+#play tone every 17 minutes
 schedule.every(timeInterval).minutes.do(playTone)
     
 while True:

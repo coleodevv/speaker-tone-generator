@@ -26,7 +26,7 @@ samplerate, numpyarray =wavfile.read(soundPathBase)
 #     print(device)
 
 def playTone():
-    sd.play(numpyarray, samplerate, mapping=None,blocking=False,loop=False,device="(Focusrite USB Audio), Windows DirectSound")
+    sd.play(numpyarray, samplerate=None, mapping=None,blocking=True,loop=False,device="(Focusrite USB Audio), Windows DirectSound")
 
 #play tone every 25 minutes
 schedule.every(timeInterval).minutes.do(playTone)
